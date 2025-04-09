@@ -1,22 +1,11 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { Button } from "@/designs/atoms/button";
 import { useCombineStore } from "@/zustand-store";
 
 const HomeTemplate = () => {
   const { count, user, setUser, decrement, increment } = useCombineStore();
-
-  useEffect(() => {
-    const handleMessage = (event: any) => {
-      if (event.data.type === "OPEN_MODAL") {
-        console.log("hi....", event);
-      }
-    };
-
-    window.addEventListener("message", handleMessage);
-    return () => window.removeEventListener("message", handleMessage);
-  }, []);
 
   return (
     <div className="p-4">
