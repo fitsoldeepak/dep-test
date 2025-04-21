@@ -38,7 +38,7 @@ export default function RootLayout({
             <Link href="/admin">Admin</Link>
             <Link href="/test">Test</Link>
             <Link href="/demo-1">Demo-1</Link>
-            <Link href="/demo-2">Demo-2</Link>
+            <Link href="/demo2">Demo-2</Link>
           </div>In Next.js (Listen for Message and Open Modal)
           {children}
         </StoreProvider>

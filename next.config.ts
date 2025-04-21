@@ -31,7 +31,6 @@ const nextConfig: NextConfig = {
           destination: process.env.CRA_BASE_PATH + "/favicon.png",
         },
       ],
-      // Runs after checking static files but before fallback routes.
       afterFiles: [],
       fallback: [
         {
@@ -47,6 +46,11 @@ const nextConfig: NextConfig = {
         {
           source: "/",
           destination: process.env.CRA_BASE_PATH + `/admin`,
+          basePath: false,
+        },
+        {
+          source: "/logout",
+          destination: process.env.CRA_BASE_PATH + `/logout`,
           basePath: false,
         },
       ],
